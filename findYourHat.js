@@ -18,7 +18,6 @@ class Field {
             if (i < this.field.length-1) {
                 stringRep += "\n";
             }
-            
         }
         return stringRep;
     }
@@ -90,7 +89,10 @@ class Field {
 }
 
 
-const myField = new Field(Field.genereateField(18, 18, 40));
+let chooseHeight = parseInt(prompt('How many squares tall do you want your maze to be?'));
+let chooseWidth = prompt('How many squares wide would you like the maze to be?');
+let numHoles = prompt('What percentage of the squares do you want covered in holes?')
+const myField = new Field(Field.genereateField(chooseHeight, chooseWidth, numHoles));
 
 
 console.log("d = down, u = up, r = right, l = left")
